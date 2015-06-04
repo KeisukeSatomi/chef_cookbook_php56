@@ -1,5 +1,6 @@
 source "https://supermarket.chef.io"
 
-cookbook 'firewalld', '~> 1.1.0'
+#cookbook 'firewalld', '~> 1.1.0'
+cookbook 'firewall', '~> 1.2.0'
 cookbook 'timezone-ii', git: 'https://github.com/L2G/timezone-ii.git'
 cookbook 'nginx', '~> 2.7.6'

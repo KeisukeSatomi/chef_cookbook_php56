@@ -17,11 +17,11 @@ Vagrant.configure(2) do |config|
   config.chef_zero.chef_repo_path = "."
   
   config.vm.provision :chef_zero do |chef|
-      chef.cookbooks_path = "./web-repo/cookbooks"
+      chef.cookbooks_path = ["./web-repo/cookbooks", "./web-repo/site-cookbooks"]
       chef.roles_path = 'web-repo/roles'
       chef.add_role 'common'
       chef.add_role 'nginx'
-      chef.add_role 'firewalld'
+      chef.add_role 'firewall'
       chef.add_role 'php56'
   end
 end

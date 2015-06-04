@@ -1,6 +1,6 @@
 {
-    "name": "nginx",
-    "description": "nginx file",
+    "name": "firewall",
+    "description": "firewall file",
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {
@@ -8,7 +8,7 @@
     "override_attributes": {
     },
     "run_list": [
-        "recipe[nginx]",
-        "recipe[nginx-custom]"
+        "recipe[firewall]",
+        "recipe[firewall-custom]"
     ]
 }
