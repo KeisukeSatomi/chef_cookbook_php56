@@ -1,0 +1,14 @@
+{
+    "name": "common",
+    "description": "common file",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+        "tz:": "Asia/Tokyo"
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[timezone-ii::fedora]"
+    ]
+}
