@@ -1,0 +1,1 @@
+default['composer']['install_dir'] = '/usr/bin'

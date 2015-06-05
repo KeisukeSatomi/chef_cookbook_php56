@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   config.vm.network :public_network, ip: "192.168.100.89"
 
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "c:/git_repo/test/", "/var/www/public/", mount_options: ['dmode=777', 'fmode=666']
+  config.vm.synced_folder "c:/git_repo/paddock", "/var/www/paddock", mount_options: ['dmode=777', 'fmode=666']
   
   config.omnibus.chef_version=:latest
   config.chef_zero.chef_repo_path = "."
@@ -23,5 +23,6 @@ Vagrant.configure(2) do |config|
       chef.add_role 'nginx'
       chef.add_role 'firewall'
       chef.add_role 'php56'
+      chef.add_role 'composer-centos7'
   end
 end

@@ -24,7 +24,7 @@ end
 
 
 # phpインストール
-%w{php php-fpm php-devel php-mbstring php-mcrypt php-opcache php-mysql php-phpunit-PHPUnit php-pecl-xdebug}.each do |p|
+%w{php php-fpm php-devel php-mbstring php-mcrypt php-opcache php-intl php-mysql php-phpunit-PHPUnit php-pecl-xdebug}.each do |p|
   package p do
     action :install
     options "--enablerepo=remi --enablerepo=remi-php56"

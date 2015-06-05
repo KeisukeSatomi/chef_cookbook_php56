@@ -1,0 +1,13 @@
+{
+    "name": "composer-centos7",
+    "description": "install composer and deploy command to /usc/local/bin",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[composer-centos7]"
+    ]
+}
