@@ -13,16 +13,18 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "c:/git_repo/paddock", "/var/www/paddock", mount_options: ['dmode=777', 'fmode=666']
   
-  config.omnibus.chef_version=:latest
+  #config.omnibus.chef_version=:latest
+  config.omnibus.chef_version = '12.2.1'
   config.chef_zero.chef_repo_path = "."
   
   config.vm.provision :chef_zero do |chef|
       chef.cookbooks_path = ["./web-repo/cookbooks", "./web-repo/site-cookbooks"]
       chef.roles_path = 'web-repo/roles'
       chef.add_role 'common'
-      chef.add_role 'nginx'
+      #chef.add_role 'nginx'
+      chef.add_role 'mysql-custom'
       chef.add_role 'firewall'
-      chef.add_role 'php56'
-      chef.add_role 'composer-centos7'
+      #chef.add_role 'php56'
+      #chef.add_role 'composer-centos7'
   end
 end

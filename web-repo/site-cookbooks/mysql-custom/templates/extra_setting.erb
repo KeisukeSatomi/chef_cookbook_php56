@@ -1,0 +1,22 @@
+# my.conf for mysql-default
+[client]
+default-character-set       = utf8
+#socket                         = /var/lib/mysql/mysql.sock
+
+[mysql]
+default-character-set       = utf8
+
+
+[mysqld]
+skip-character-set-client-handshake
+character-set-server        = utf8
+collation-server            = utf8_general_ci
+init-connect                = set names utf8
+#socket                         = /var/lib/mysql/mysql.sock
+default-time-zone=Asia/Tokyo
+
+[mysqldump]
+default-character-set       = utf8
+
+[mysqld_safe]
+#socket                         = /var/lib/mysql/mysql.sock
