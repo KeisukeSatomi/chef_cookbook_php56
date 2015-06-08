@@ -20,6 +20,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision :chef_zero do |chef|
       chef.cookbooks_path = ["./web-repo/cookbooks", "./web-repo/site-cookbooks"]
       chef.roles_path = 'web-repo/roles'
+      chef.json = {
+        "nginx" => {
+          "php_app_env" => "local"
+        }
+      }
       chef.add_role 'common'
       chef.add_role 'nginx'
       chef.add_role 'mysql-custom'
