@@ -8,6 +8,7 @@
     "override_attributes": {
     },
     "run_list": [
-        "recipe[mysql-custom]"
+        "recipe[mysql-custom]",
+        "recipe[database-custom]"
     ]
 }

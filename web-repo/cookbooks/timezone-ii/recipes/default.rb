@@ -16,7 +16,13 @@ package value_for_platform_family(
 )
 
 case node.platform_family
-when 'debian', 'fedora'
+when 'rhel'
+  include_recipe value_for_platform(
+    'amazon' => { 'default' => 'timezone-ii::amazon' },
+    'default' => 'timezone-ii::rhel'
+  )
+
+when 'debian', 'fedora', 'pld'
   include_recipe "timezone-ii::#{node.platform_family}"
 
 else
@@ -43,5 +49,3 @@ else
   end  # if/else node.os
 
 end  # case node.platform_family
-
-# vim:ts=2:sw=2:
