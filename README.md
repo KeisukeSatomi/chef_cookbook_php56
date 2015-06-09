@@ -39,11 +39,15 @@ For Windows Host
 
  `config.vm.synced_folder "c:/xxxxxxxx", "/xxxxxxx", mount_options: ['dmode=777', 'fmode=666']`
 
-- リポジトリ直下で以下コマンド
+- web-repo配下へ移動し以下コマンド
+
+ `berks vendor cookbooks`
+
+- リポジトリ直下へ移動しで以下コマンド
 
  `vagrant up --provision`
 
 ※yajil-rubyとffiの不適合エラーは、fatalじゃなくてただの警告なので無視でよい。
 ※nginxのインストール時にohaiのversion6に関する警告が出ますが、とりあえず無視で動きます。根本的な修正方針をご存じの方はご連絡頂けると幸いです。
 
-#####　ここまでで必要なミドルウェアは完了なので、ドキュメントルート配下にアプリを置いてブラウザで192.168.100.89を開くと閲覧可能。
+#####　ここまでで必要なミドルウェアセットアップ完了。ドキュメントルート配下に適当なindex.phpを置いてブラウザで192.168.100.89を開くと閲覧可能。
