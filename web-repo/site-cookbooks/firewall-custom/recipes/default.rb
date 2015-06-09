@@ -6,7 +6,7 @@
 #
 firewall_rule 'allow world to ssh' do
   port 22
-  source '192.168.100.0/24'
+  source '192.168.0.0/16'
   action [:allow]
   only_if { node['firewall']['allow_ssh'] }
 end
