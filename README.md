@@ -21,13 +21,13 @@ For Windows Host
 
  `vagrant plugin install vagrant-omnibus`
 
+ `vagrant plugin install vagrant-vbox-snapshot`
+
  `vagrant plugin install ruby-wmi`
 
  `vagrant plugin install sahara`
 
  `vagrant plugin install vagrant-share`
-
- `vagrant plugin install vagrant-vbox-snapshot`
 
  `vagrant plugin install win32-service`
 
