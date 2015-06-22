@@ -18,6 +18,12 @@ firewall_rule 'allow world to http' do
   action [:allow]
 end
 
+firewall_rule 'allow lan to mysql' do
+  port 3306
+  source '192.168.0.0/16'
+  action [:allow]
+end
+
 #bash 'restart_firewall' do
 #  code <<-EOF
 #    firewall-cmd --reload
